@@ -1,8 +1,19 @@
 <section class="made">
-  <img class="made-foto"
-    src="src/images/image (1) (1).jpg"
-    srcset="src/images/image (1) (1).jpg 1x, src/images/image@2x (1).jpg 2x"
-  />
+  <picture>
+    <source
+      srcset="./images/made/madebackd.jpg 1x, ./images/made/madebackd@2x.jpg 2x"
+      media="(min-width:1200px)"
+    />
+    <source
+      srcset="./images/made/madebackt.jpg 1x, ./images/made/madebackt@2x.jpg 2x"
+      media="(min-width: 768px)"
+    />
+    <source
+      srcset="./images/made/madebackm.jpg 1x, ./images/made/madebackm@2x.jpg 2x"
+      media="(max-width:767px)"
+    />
+    <img src="./images/made/madebackm.jpg" alt="chocolate-made" /> </picture
+  ><use><svg href="../images/symbol-defs.svg/"></svg></use>
   <div class="made-right">
     <h2 class="made__title">how it's <span class="made-span">made?</span></h2>
     <h4 class="made-subtitle">
