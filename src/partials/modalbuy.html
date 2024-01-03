@@ -1,10 +1,78 @@
-<div class="backdrop is-hidden" data-modal>
+<div class="backdrop is-hidden" data-form-backdrop>
   <form class="modal-buy">
     <button type="button" class="modal-close" data-modal-close>
       <svg class="modal-close__icon">
         <use href="./images/symbol-defs.svg#icon-cross"></use>
       </svg>
     </button>
+    <ul class="buy-list">
+      <li class="buy-list__item">
+        <picture>
+          <source
+            srcset="
+              ./images/modal/chocotd.png,
+              ./images/modal/chocotd@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/modal/chocom.png    1x,
+              ./images/modal/chocom@2x.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <img src="./images/modal/chocom.png" alt="chocolate" />
+        </picture>
+        <div class="buy-list__gram">
+          <p class="buy-list__grams">100 g</p>
+        </div>
+      </li>
+      <li class="buy-list__item">
+        <picture>
+          <source
+            srcset="
+              ./images/modal/chocomixtd.png    1x,
+              ./images/modal/chocomixtd@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/modal/chocomixm.png    1x,
+              ./images/modal/chocomixm@2x.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <img src="./images/modal/chocomixm.png" alt="chocolate" />
+        </picture>
+        <div class="buy-list__gram">
+          <p class="buy-list__grams">200 g</p>
+        </div>
+      </li>
+      <li class="buy-list__item">
+        <picture>
+          <source
+            srcset="
+              ./images/modal/chocobarsd.png    1x,
+              ./images/modal/chocobarsd@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/modal/chocobarsm.png    1x,
+              ./images/modal/chocobarsm@2x.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <img src="./images/modal/chocobarsm.png" alt="chocolate" />
+        </picture>
+        <div class="buy-list__gram">
+          <p class="buy-list__grams">300 g</p>
+        </div>
+      </li>
+    </ul>
     <h2 class="modal__title">Buy now</h2>
     <ul class="modal-list">
       <li class="modal-list__item">
@@ -43,9 +111,9 @@
             class="modal-list__input"
             placeholder="Phone number"
           />
-          <!-- <svg>
-                <use href="#"></use>
-              </svg> -->
+          <svg>
+            <use href="./images/symbol-defs.svg#icon-ukraine"></use>
+          </svg>
         </label>
       </li>
       <li class="modal-list__item">
@@ -56,9 +124,9 @@
             class="modal-list__input"
             placeholder="Enter card"
           />
-          <!-- <svg>
-                <use href="#"></use>
-              </svg> -->
+          <svg>
+            <use href="./images/symbol-defs.svg#icon-mastercard"></use>
+          </svg>
         </label>
       </li>
       <li class="modal-list__item">
@@ -73,20 +141,6 @@
         </label>
       </li>
     </ul>
-    <button type="submit" class="modal__btn-submit">Submit</button>
+    <button type="submit" class="modal__btn-submit" data-open-info-modal>Submit</button>
   </form>
-</div>
-<div class="backdrop is-hidden" data-info-backdrop>
-  <section class="modal-thanks">
-    <!-- <button class="close-btn" type="button" data-close-info-modal>
-          <svg class="close-svg-info">
-            <use href="#"></use>
-          </svg>
-        </button> -->
-    <h2 class="modal-thaks__title">Thank you!</h2>
-    <p class="modal-thaks__text">
-      We are glad that you ordered our chocolate and we are giving you a 20%
-      discount on all our products.
-    </p>
-  </section>
 </div>
