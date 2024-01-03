@@ -1,0 +1,92 @@
+<div class="backdrop is-hidden" data-modal>
+  <form class="modal-buy">
+    <button type="button" class="modal-close" data-modal-close>
+      <svg class="modal-close__icon">
+        <use href="./images/symbol-defs.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <h2 class="modal__title">Buy now</h2>
+    <ul class="modal-list">
+      <li class="modal-list__item">
+        <label class="modal-list__label">
+          Personal information
+          <input
+            type="text"
+            class="modal-list__input"
+            required
+            placeholder="Name"
+          />
+          <input
+            type="text"
+            class="modal-list__input"
+            required
+            placeholder="Surname"
+          />
+        </label>
+      </li>
+      <li class="modal-list__item">
+        <label class="modal-list__label">
+          Email
+          <input
+            type="email"
+            class="modal-list__input"
+            required
+            placeholder="Enter your email"
+          />
+        </label>
+      </li>
+      <li class="modal-list__item">
+        <label class="modal-list__label">
+          Phone Number
+          <input
+            type="tel"
+            class="modal-list__input"
+            placeholder="Phone number"
+          />
+          <!-- <svg>
+                <use href="#"></use>
+              </svg> -->
+        </label>
+      </li>
+      <li class="modal-list__item">
+        <label class="modal-list__label">
+          Card
+          <input
+            type="number"
+            class="modal-list__input"
+            placeholder="Enter card"
+          />
+          <!-- <svg>
+                <use href="#"></use>
+              </svg> -->
+        </label>
+      </li>
+      <li class="modal-list__item">
+        <label class="modal-list__label"
+          >Comment
+          <textarea
+            class="modal-list__textarea"
+            cols="30"
+            rows="10"
+            placeholder="Enter text"
+          ></textarea>
+        </label>
+      </li>
+    </ul>
+    <button type="submit" class="modal__btn-submit">Submit</button>
+  </form>
+</div>
+<div class="backdrop is-hidden" data-info-backdrop>
+  <section class="modal-thanks">
+    <!-- <button class="close-btn" type="button" data-close-info-modal>
+          <svg class="close-svg-info">
+            <use href="#"></use>
+          </svg>
+        </button> -->
+    <h2 class="modal-thaks__title">Thank you!</h2>
+    <p class="modal-thaks__text">
+      We are glad that you ordered our chocolate and we are giving you a 20%
+      discount on all our products.
+    </p>
+  </section>
+</div>
