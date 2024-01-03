@@ -5,6 +5,9 @@
         <use href="./images/symbol-defs.svg#icon-cross"></use>
       </svg>
     </button>
+    <h2 class="modal__title">
+      <span class="modal__title--orange">Buy</span> now
+    </h2>
     <ul class="buy-list">
       <li class="buy-list__item">
         <picture>
@@ -24,9 +27,7 @@
           />
           <img src="./images/modal/chocom.png" alt="chocolate" />
         </picture>
-        <div class="buy-list__gram">
-          <p class="buy-list__grams">100 g</p>
-        </div>
+        <button class="buy-list__gram">100g</button>
       </li>
       <li class="buy-list__item">
         <picture>
@@ -46,9 +47,9 @@
           />
           <img src="./images/modal/chocomixm.png" alt="chocolate" />
         </picture>
-        <div class="buy-list__gram">
-          <p class="buy-list__grams">200 g</p>
-        </div>
+        <button class="buy-list__gram">
+          200 g
+        </button>
       </li>
       <li class="buy-list__item">
         <picture>
@@ -68,12 +69,11 @@
           />
           <img src="./images/modal/chocobarsm.png" alt="chocolate" />
         </picture>
-        <div class="buy-list__gram">
-          <p class="buy-list__grams">300 g</p>
-        </div>
+        <button class="buy-list__gram">
+          300 g
+        </button>
       </li>
     </ul>
-    <h2 class="modal__title">Buy now</h2>
     <ul class="modal-list">
       <li class="modal-list__item">
         <label class="modal-list__label">
@@ -84,6 +84,13 @@
             required
             placeholder="Name"
           />
+          <input
+            type="text"
+            class="modal-list__input"
+            placeholder="Surname"
+          />
+        </label>
+        <label>
           <input
             type="text"
             class="modal-list__input"
@@ -109,6 +116,7 @@
           <input
             type="tel"
             class="modal-list__input"
+            required
             placeholder="Phone number"
           />
           <svg>
@@ -118,10 +126,11 @@
       </li>
       <li class="modal-list__item">
         <label class="modal-list__label">
-          Card
+          Card number
           <input
             type="number"
             class="modal-list__input"
+            required
             placeholder="Enter card"
           />
           <svg>
@@ -141,6 +150,8 @@
         </label>
       </li>
     </ul>
-    <button type="submit" class="modal__btn-submit" data-open-info-modal>Submit</button>
+    <button type="submit" class="modal__btn-submit" data-open-info-modal>
+      Submit
+    </button>
   </form>
 </div>
