@@ -1,0 +1,16 @@
+@mixin text ($color, $fsize, $fstyle, $fweight, $lheight, $lspacing) {
+    color: $color;
+    font-size: $fsize;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    line-height: $lheight;
+    letter-spacing: $lspacing;
+}
+
+@mixin flex ($justify, $align, $direction, $wrap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
