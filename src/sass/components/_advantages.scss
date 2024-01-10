@@ -1,0 +1,28 @@
+.advantages {
+  padding: 20px 0;
+  background-color: #1e1823;
+}
+.advantages-list {
+  @include flex(space-between,column);
+  .advantages-container {
+    @include flex;
+    width: 62px;
+    height: 62px;
+    border-radius: 365px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    &__svg {
+      width: 32px;
+      height: 32px;
+      fill: #fd9222;
+    }
+  }
+  &__title {
+    @include text(18px, $fweight:600);
+    color: #fff;
+    margin-bottom: 18px;
+  }
+  &__paragraph {
+    @include text(14px);
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
