@@ -22,7 +22,7 @@
     margin-bottom: 18px;
   }
   &__paragraph {
-    @include text(14px, $fweight:400);
+    @include text(14px);
     color: rgba(255, 255, 255, 0.7);
   }
 }
