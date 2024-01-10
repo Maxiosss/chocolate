@@ -1,51 +1,14 @@
-$button: (
-  'background-color': #fd9222,
-  'border-radius': 100px,
-  'color': #ffffff,
+$colors: (
+'background-primary': #FAFAFA,
+'background-secondary':#FFF,
+'text-secondary': #111111,
+'text-third':#FD9222,
+'text-ptimary':#FFF,
+'text-fourth':rgba(17, 17, 17, 0.70),
+'text-modal':rgba(64, 64, 64, 0.30),
+'border-modal':rgba(17, 17, 17, 0.05),
+
 );
-
-$title-black: (
-    'color': #111,
-'font-family': Montserrat,
-'font-size': 24px,
-'font-style': normal,
-'font-weight': 600,
-'line-height': 28px,
-'text-transform': uppercase,
-);
-
-$tiitle-orange: (
-    'color': #FD9222,
-'font-family': Montserrat,
-'font-size': 24px,
-'font-style': normal,
-'font-weight': 600,
-'line-height': 28px,
-'text-transform': uppercase,
-)
-
-$title-white (
-    'color': #FFF,
-    'font-family': Montserrat,
-    'font-size': 28px,
-    'font-style': normal,
-    'font-weight': 500,
-    'line-height': 34px,
-);
-
-$black-text: (
-    'color': #111,
-'font-family': Montserrat,
-'font-size': 14px,
-'font-style': normal,
-'font-weight': 400,
-'line-height': 18px,
-);
-
-$subtitle-black:(
-    'color': #111,
-'text-align': center,
-'font-family': Montserrat,
-'font-style': normal,
-'font-weight': 600,
-)
+@function getColor($key) {
+@return map-get($colors, $key);
+};
