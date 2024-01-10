@@ -49,3 +49,21 @@
     }
 }
 
+.header-list__link{
+    @include text (#111, 14px, normal, 500, 16px, -0.28px);
+    margin: 0 24px;
+    &:nth-child(1){
+        margin: 0 24px 0 0;
+    }
+    &:nth-child(5){
+        margin: 0 0 0 24px;
+    }
+}
+
+.menu-right__svg{
+    width: 24px;
+    height: 24px;
+    &:nth-child(1){
+        margin-right: 18px;
+    }
+}
