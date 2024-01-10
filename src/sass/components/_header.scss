@@ -10,6 +10,9 @@
     background-color: transparent;
     border: none;
     padding: 0;
+    @media screen and (min-width: 1200px) {
+        display: none;
+    }
 
     &__svg{
         width: 28px;
@@ -19,9 +22,15 @@
 
 .header-list{
     display: none;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 .menu-right{
     display: none;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 
 
