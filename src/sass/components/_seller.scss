@@ -1,6 +1,7 @@
 .sellers__title {
   @extend %title;
   color: getColor('text-primary');
+  margin-bottom: 32px;
   &--orange {
     color: getColor('text-third');
   }
@@ -9,6 +10,7 @@
   @include flex($direction: column);
   &__text {
     @include text($lheight: 18px);
+    margin: 20px 0 32px;
   }
   &__img {
     width: 335px;
@@ -22,4 +24,5 @@
   @include text($fweight: 600);
   color: getColor('text-secondary');
   padding: 28px 12px;
+  margin-top: 32px;
 }
