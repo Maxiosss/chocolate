@@ -1,0 +1,31 @@
+.footer{
+    background-color: $background-third;
+}
+.footer-title{
+    color: $text-secondary;
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px;
+letter-spacing: -0.48px;
+}
+.footer-title__span{
+    color: $text-third;
+
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 116.667% */
+letter-spacing: -0.48px;
+}
+.contact__subtitle{
+    color:$text-secondary;
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; 
+}
