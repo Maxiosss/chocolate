@@ -1,0 +1,69 @@
+.header .inner-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 14px;
+}
+
+.burgermenu{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    @media screen and (min-width: 1200px) {
+        display: none;
+    }
+
+    &__svg{
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.header-list{
+    display: none;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
+}
+.menu-right{
+    display: none;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    @include text (#111, 14px, italic, 700, 18px, -0.43px);
+    &__svg{
+        width: 21px;
+        height: 21px;
+        margin-left: 4px;
+    }
+    &__simply{
+        @include text (#111, 14px, normal, 700, 18px, -0.43px);
+    }
+}
+
+.header-list__link{
+    @include text (#111, 14px, normal, 500, 16px, -0.28px);
+    margin: 0 24px;
+    &:nth-child(1){
+        margin: 0 24px 0 0;
+    }
+    &:nth-child(5){
+        margin: 0 0 0 24px;
+    }
+}
+
+.menu-right__svg{
+    width: 24px;
+    height: 24px;
+    &:nth-child(1){
+        margin-right: 18px;
+    }
+}
