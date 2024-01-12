@@ -2,3 +2,46 @@
     width: 335px;
 height: 1032px;
 }
+.made-right{
+    background-color: $background-secondary;
+}
+.made__title{
+    color: $text-primary;
+    font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px; /* 120% */
+letter-spacing: -0.6px;
+text-transform: uppercase;
+}
+.made-span{
+    color: $text-third;
+font-family: Montserrat;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: -0.6px;
+text-transform: uppercase;
+}
+.made__subtitle{
+    color: $text-primary;
+
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 24px
+}
+.made-list__item{
+    color: $text-primary;
+
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+}
+
