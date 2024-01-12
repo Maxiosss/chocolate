@@ -1,0 +1,25 @@
+.sellers__title {
+  @extend %title;
+  color: getColor('text-primary');
+  &--orange {
+    color: getColor('text-third');
+  }
+}
+.sellers-list {
+  @include flex($direction: column);
+  &__text {
+    @include text($lheight: 18px);
+  }
+  &__img {
+    width: 335px;
+    height: 464px;
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+}
+.sellers__button {
+  @include text($fweight: 600);
+  color: getColor('text-secondary');
+  padding: 28px 12px;
+}
