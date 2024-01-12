@@ -21,7 +21,8 @@
 .header-list{
     display: none;
     @media screen and (min-width: 1200px) {
-        display: flex;
+            display: flex;
+            gap: 24px;
     }
 }
 .menu-right{
@@ -51,13 +52,6 @@
 .header-list__link{
     @include text ($fweight: 500, $lheight: 16px, $lspacing: -0.28px);
     color: getColor(text-primary);
-    margin: 0 24px;
-    &:nth-child(1){
-        margin: 0 24px 0 0;
-    }
-    &:nth-child(5){
-        margin: 0 0 0 24px;
-    }
 }
 
 .menu-right__svg{
