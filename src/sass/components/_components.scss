@@ -1,0 +1,112 @@
+.components {
+  padding: 72px 0;
+
+  &__title {
+    color: getColor('text-primary');
+    @extend %title;
+    text-transform: uppercase;
+    margin: 0 auto;
+    max-width: 247px;
+    text-align: center;
+    margin-bottom: 24px;
+
+    &--orange {
+      color: getColor('text-third');
+    }
+  }
+  &__description {
+    @include text($lheight: 18px);
+    max-width: 335px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.components-list {
+  margin-top: 50px;
+  @include flex($direction: column);
+  gap: 20px;
+
+  &__item {
+    cursor: pointer;
+    width: 335px;
+    padding: 28px 0;
+    border-radius: 15px;
+    &:nth-child(1) {
+      background-color: getColor('text-third');
+    }
+    &:nth-child(2) {
+      background-color: getColor('background-secondary');
+      border: 1px solid getColor('text-third');
+    }
+    &:nth-child(3) {
+      background-color: getColor('background-third');
+    }
+    &:nth-child(4) {
+      background-color: getColor('background-secondary');
+      border: 1px solid getColor('text-third');
+    }
+
+    .front-components {
+      &__img {
+        width: 335px;
+        height: 171px;
+      }
+
+      &__title {
+        margin-left: 28px;
+        @include text($lheight: 18px, $fweight: 600);
+        color: getColor('text-secondary');
+        text-transform: uppercase;
+
+        &--black {
+          color: getColor('text-primary');
+        }
+      }
+    }
+
+    .back-components {
+      display: none;
+      width: 335px;
+      border-radius: 15px;
+      background-color: getColor('background-secondary');
+      padding: 28px;
+
+      &__title {
+        @include text(18px, $lspacing: -0.54px, $fweight: 600);
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      .back-components-info {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 14px;
+
+        &__type {
+          @include text(10px, 12px, 0);
+          color: getColor('text-secondary');
+          text-align: center;
+          border-radius: 35px;
+          padding: 6px 16px;
+        }
+
+        &__benefits {
+          @include text(10px, 12px, 0);
+          color: getColor('text-primary');
+          border-radius: 35px;
+          padding: 6px 16px;
+          background-color: getColor('background-secondary');
+          border: 1px solid getColor('text-third');
+        }
+      }
+
+      &__paragraph {
+        @include text($lheight: 18px);
+        max-width: 279px;
+        overflow: hidden;
+        color: getColor('text-primary');
+      }
+    }
+  }
+}
