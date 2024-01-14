@@ -54,6 +54,7 @@
       }
 
       &__title {
+        margin-top: 25px;
         margin-left: 28px;
         @include text($lheight: 18px, $fweight: 600);
         color: getColor('text-secondary');
