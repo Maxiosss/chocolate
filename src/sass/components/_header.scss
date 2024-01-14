@@ -1,7 +1,5 @@
 .header .inner-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex (space-between);
     padding: 20px;
     margin-bottom: 14px;
 }
@@ -23,7 +21,8 @@
 .header-list{
     display: none;
     @media screen and (min-width: 1200px) {
-        display: flex;
+            display: flex;
+            gap: 24px;
     }
 }
 .menu-right{
@@ -35,29 +34,24 @@
 
 
 .logo{
-    display: flex;
-    align-items: center;
+    @include flex;
     text-transform: uppercase;
-    @include text (#111, 14px, italic, 700, 18px, -0.43px);
+        @include text (18px, 20px, -0.54px, 700, italic);
+        color: getColor("text-primary");
     &__svg{
         width: 21px;
         height: 21px;
         margin-left: 4px;
     }
     &__simply{
-        @include text (#111, 14px, normal, 700, 18px, -0.43px);
+        @include text (18px, 20px, -0.54px, 700);
+        color: getColor("text-primary");
     }
 }
 
 .header-list__link{
-    @include text (#111, 14px, normal, 500, 16px, -0.28px);
-    margin: 0 24px;
-    &:nth-child(1){
-        margin: 0 24px 0 0;
-    }
-    &:nth-child(5){
-        margin: 0 0 0 24px;
-    }
+    @include text ($fweight: 500, $lheight: 16px, $lspacing: -0.28px);
+    color: getColor("text-primary");
 }
 
 .menu-right__svg{
