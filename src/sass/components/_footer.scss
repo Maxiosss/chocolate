@@ -1,5 +1,5 @@
 .footer {
-  background-color: $background-third;
+  background-color: GetColor("background-third");
 }
 .footer-title {
   color: $text-secondary;
@@ -11,7 +11,7 @@
   letter-spacing: -0.48px;
 }
 .footer-title__span {
-  color: $text-third;
+  color: GetCOlor("text-third");
 
   font-family: Montserrat;
   font-size: 24px;
@@ -21,7 +21,7 @@
   letter-spacing: -0.48px;
 }
 .contact__subtitle {
-  color: $text-secondary;
+  color: GetCOlor("text-secondary");
   text-align: center;
   font-family: Montserrat;
   font-size: 14px;
@@ -30,7 +30,7 @@
   line-height: 18px;
 }
 .footer-email__link {
-  background-color: $text-secondary;
+  background-color: GetCOlor("text-secondary");
   text-align: center;
   font-family: Montserrat;
   font-size: 14px;
@@ -40,17 +40,16 @@
   letter-spacing: -0.28px;
 }
 .footer-social-list {
-  display: flex;
-  justify-content: space-between;
+  @include text();
   text-align: center;
 }
 .footer-social-svg {
-  color: $text-secondary;
+  color: GetCOlor("text-secondary");
   width: 22px;
   height: 22px;
 }
 .footer-list-item__link {
-  background-color: $text-secondary;
+  background-color: GetCOlor("text-secondary");
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
