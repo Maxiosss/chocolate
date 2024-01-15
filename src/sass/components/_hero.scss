@@ -1,3 +1,11 @@
+.hero{
+    margin-bottom: 71px;
+    @media screen and (min-width: 768px){
+        margin-bottom: 50px;
+    }
+}
+
+
 .hero-background {
     background-image: url(../images/hero/chocobackm.jpg);
     margin-top: 17px;
@@ -13,10 +21,94 @@
     (min-device-pixel-ratio: 2) {
         background-image: url(../images/hero/chocobackm@2x.jpg);
     }
+
+    @media screen and (min-width: 768px) {
+        background-image: url(../images/hero/chocobackt.jpg);
+        padding: 671px 40px 40px;
+
+        @media(-webkit-min-device-pixel-ratio: 2),
+            (-o-min-device-pixel-ratio: 2/1),
+            (min-resolution: 2dppx),
+            (min-resolution: 192dpi),
+            (min-device-pixel-ratio: 2) {
+                background-image: url(../images/hero/chocobackt@2x.jpg);
+            }
+    }
+        @media screen and (min-width: 1200px) {
+            background-image: url(../images/hero/chocobackd.jpg);
+            padding: 381px 40px 40px;
+
+            @media(-webkit-min-device-pixel-ratio: 2),
+                (-o-min-device-pixel-ratio: 2/1),
+                (min-resolution: 2dppx),
+                (min-resolution: 192dpi),
+                (min-device-pixel-ratio: 2) {
+                    background-image: url(../images/hero/chocobackd@2x.jpg);
+                }
+            }
 }
 
 .hero__title{
     @include text(20px, 24px, -0.6px, 500);
     color: getColor(background-secondary);
     margin-bottom: 32px;
+    @media screen and (min-width: 768px){
+        @include text(28px, 34px, -0.84px, 500);
+        width: 484px;
+    }
+}
+.hero-list{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0;
+    margin: 0;
+    &__buy{
+        padding: 12px 28px;
+        border-radius: 100px;
+        background-color: getColor("text-third");
+        border: none;
+        @include text($fweight: 600);
+        color: getColor("background-secondary");
+    }
+    &__how{
+        padding: 12px 25px;
+        border-radius: 100px;
+        @include text($fweight: 600);
+        color: getColor("background-secondary");
+        border: 1px solid getColor("background-secondary");
+    }
+    &__svg{
+        width: 16px;
+        height: 16px;
+        fill: getColor("text-third");
+    }
+    &__circle{
+        width: 28px;
+        height: 28px;
+        background-color: getColor("background-secondary");
+            border-radius: 50%;
+            padding: 6px;
+            margin-left: 12px;
+    }
+    &__scroll{
+        display: flex;
+        align-items: center;
+        margin-top: 32px;
+        @include text(12px, 14px, -0.36px, 500);
+            color: getColor("background-secondary");
+            @media screen and (min-width: 768px){
+            margin: 0;
+        }
+    }
+}
+
+.hero-button-container{
+    @media screen and (min-width: 768px){
+        @include flex(flex-start);
+        gap: 235px;
+    }
+    @media screen and (min-width: 1200px){
+        gap: 665px;
+    }
 }
