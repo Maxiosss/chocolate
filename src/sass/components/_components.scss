@@ -48,6 +48,9 @@
     }
 
     .front-components {
+      &:hover .back-components {
+        transform: translateX(2%);
+      }
       &__img {
         width: 335px;
         height: 171px;
@@ -67,11 +70,14 @@
     }
 
     .back-components {
-      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 335px;
       border-radius: 15px;
       background-color: getColor('background-secondary');
       padding: 28px;
+      transform: translateX(-102%);
 
       &__title {
         @include text(18px, $lspacing: -0.54px, $fweight: 600);
