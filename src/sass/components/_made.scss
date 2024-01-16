@@ -1,3 +1,12 @@
+.made {
+  gap: 20px;
+}
+.made-video {
+  border-radius: 15px;
+}
+.made-video__svg {
+  color: getColor('text-secondary');
+}
 .made-right {
   background-color: getColor('background-secondary');
   border-radius: 15px;
@@ -17,10 +26,10 @@
   color: getColor('text-primary');
   margin-bottom: 20px;
 }
-.made-list{
-  @include flex($direction:column);
-  gap:18px;
-  &__item{
+.made-list {
+  @include flex($direction: column);
+  gap: 18px;
+  &__item {
     list-style-type: circle;
   }
   &__text {
@@ -28,5 +37,3 @@
     color: getColor('text-primary');
   }
 }
-
-
