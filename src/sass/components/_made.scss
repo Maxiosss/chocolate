@@ -1,5 +1,5 @@
 .made {
-  gap: 20px;
+@include flex()
 }
 .made-video {
   border-radius: 15px;
