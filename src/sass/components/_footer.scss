@@ -1,40 +1,35 @@
 .footer {
   padding: 32px 20px;
-  background-color: GetColor('background-third');
+  background-color: getColor('background-third');
 }
-.footer-title {
-  @include text(24px, 28px, -0.48px, 500, normal);
-  color: $text-secondary;
-  font-family: Montserrat;
+.footer__title {
+  @include text(24px, 28px, -0.48px, 500);
+  color: getColor('text-secondary');
 }
-.footer-title__span {
-  @include text(24px, 28px, -0.48px, 500, normal);
-  color: GetColor('text-third');
-  font-family: Montserrat;
+.footer__title__span {
+  @include text(24px, 28px, -0.48px, 500);
+  color: getColor('text-third');
 }
 .contact__subtitle {
-  @include text(14px, 18px, $lspacing, 500, normal);
-  color: GetColor('text-secondary');
+  @include text($lheight: 18px, $fweight: 500);
+  color: getColor('text-secondary');
   text-align: center;
-  font-family: Montserrat;
   margin-bottom: 14px;
 }
 .footer-contact-list {
   gap: 4px;
 }
 .footer-email__link {
-  @include text(14px, 18px, -0.28, 400, normal);
-  background-color: GetColor('text-secondary');
+  @include text($lheight: 18px);
+  background-color: getColor('text-secondary');
   text-align: center;
-  font-family: Montserrat;
 }
 .footer-social-list {
-  @include text();
   margin: right;
   gap: 14px;
 }
 .footer-social-svg {
-  color: GetColor('text-secondary');
+  color: getColor('text-secondary');
   width: 22px;
   height: 22px;
 }
@@ -44,7 +39,6 @@
   gap: 18px;
 }
 .footer-list-item__link {
-  @include text(14px, 16px, -0.28, 500, normal);
-  background-color: GetColor('text-secondary');
-  font-family: Montserrat;
+  @include text($lheight: 16px, $fweight: 500);
+  background-color: getColor('text-secondary');
 }
