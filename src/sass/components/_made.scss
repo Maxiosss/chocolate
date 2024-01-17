@@ -6,6 +6,9 @@
 }
 .made-video__svg {
   color: getColor('text-secondary');
+  position: absolute;
+left: 150px;
+top: 233px;
 }
 .made-right {
   background-color: getColor('background-secondary');
