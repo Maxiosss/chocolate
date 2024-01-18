@@ -1,5 +1,5 @@
 .made {
-@include flex;
+@include flex($direction: column);
 }
 .made-video {
   border-radius: 15px;
