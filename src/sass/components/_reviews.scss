@@ -9,6 +9,9 @@
     color: getColor('text-primary');
     text-align: center;
     margin-bottom: 74px;
+    @media screen and (min-width: 768px) {
+        @include text(24px, 24px, -0, 6px, 600);
+    }
 }
 
 .reviews-card__img{
@@ -73,18 +76,6 @@
     }
 }
 
-.oval{
-    width: 28px;
-    height: 13px;
-    color: getColor("text-third");
-}
-
-.slider{
-    @include flex;
-    width: 107px;
-    height: 13px;
-    gap: 13px;
-}
 
 .reviews-list{
     @include flex(flex-start);
@@ -92,4 +83,25 @@
     @media screen and (min-width: 1200px) {
         @include flex(center);
     }
+}
+
+.reviews-slider{
+    @include flex;
+    gap: 13px;
+    margin: 20px 0 32px;
+    @media screen and (min-width: 768px) {
+        margin: 32px 0 50px;
+    }
+}
+
+.reviews-slider__rectangle{
+    width: 28px;
+    height: 13px; 
+    fill: getColor("text-third");
+}
+
+.reviews-slider__ellipse{
+    width: 13px;
+    height: 13px;
+    fill: getColor("border-modal");
 }
