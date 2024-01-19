@@ -1,46 +1,53 @@
 .made {
-    @include flex;
-    }
-    .made-video {
-      border-radius: 15px;
-      width: 335px;
-height: 500px;
-    }
-    .made-video__svg {
-      color: getColor('text-secondary');
-      position: absolute;
-    left: 150px;
-    top: 233px;
-    }
-    .made-right {
-      background-color: getColor('background-secondary');
-      border-radius: 15px;
-      padding: 20px 14px;
-      margin-top: 20px;
-    }
-    .made__title {
-      color: getColor('text-primary');
-      @extend %title;
-      margin-bottom: 32px;
-      &--orange {
-        color: getColor('text-third');
-        text-align: center
-      }
-    }
-    
-    .made__subtitle {
-      @include text(18px, 24px, normal, 600);
-      color: getColor('text-primary');
-      margin-bottom: 20px;
-    }
-    .made-list {
-      @include flex($direction: column);
-      gap: 18px;
-      &__item {
-        list-style-type: circle;
-      }
-      &__text {
-        @include text($lheight: 18px);
-        color: getColor('text-primary');
-      }
-    }
+  @include flex;
+}
+.video-box{
+  position: relative;
+  width: 335px;
+  height: 500px;
+}
+.made-video {
+  border-radius: 15px;
+}
+.made-video__svg {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+
+}
+.made-right {
+  background-color: getColor('background-secondary');
+  border-radius: 15px;
+  padding: 20px 14px;
+  margin-top: 20px;
+}
+.made__title {
+  color: getColor('text-primary');
+  @extend %title;
+  margin-bottom: 32px;
+  text-align: center;
+  &--orange {
+    color: getColor('text-third');
+  }
+}
+
+.made__subtitle {
+  @include text(18px, 24px, normal, 600);
+  color: getColor('text-primary');
+  margin-bottom: 20px;
+}
+.made-list {
+  @include flex($direction: column);
+  gap: 18px;
+  list-style-type: disc;
+  &__item {
+
+  }
+  &__text {
+    @include text($lheight: 18px);
+    color: getColor('text-primary');
+  }
+}

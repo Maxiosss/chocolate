@@ -57,8 +57,8 @@
 <path d="M52.927 0.002h-36.926c-8.837 0-16.001 7.164-16.001 16.001s7.164 16.001 16.001 16.001v0h36.926c8.837 0 16.001-7.164 16.001-16.001s-7.164-16.001-16.001-16.001v0z"></path>
 </symbol>
 <symbol id="icon-play" viewBox="0 0 32 32">
-<path d="M10.911 24.004v-15.275l14.548 7.638-14.548 7.638z"></path>
-<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.7273" d="M31.641 16.003c0 8.637-7.002 15.639-15.639 15.639s-15.639-7.002-15.639-15.639c0-8.637 7.002-15.639 15.639-15.639s15.639 7.002 15.639 15.639z"></path>
+<path fill="#f5f4f4" style="fill: var(--color1, #f5f4f4)" d="M11.89 23.779v-13.719l12.804 6.859-12.804 6.859z"></path>
+<path fill="none" stroke="#fff" style="stroke: var(--color2, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="0.9143" d="M31.553 16.005c0 8.587-6.961 15.548-15.548 15.548s-15.548-6.961-15.548-15.548c0-8.587 6.961-15.548 15.548-15.548s15.548 6.961 15.548 15.548z"></path>
 </symbol>
 </defs>
 </svg>
