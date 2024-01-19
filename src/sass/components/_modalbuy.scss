@@ -1,0 +1,75 @@
+.backdrop-buy {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+.modal-buy {
+  position: fixed;
+  max-width: 312px;
+  width: 100%;
+  max-height: 1007px;
+  height: 100%;
+  overflow: auto;
+  padding: 32px 24px;
+  border-radius: 15px;
+  z-index: 100;
+  background-color: getColor('background-primary');
+  &-close__icon {
+    width: 24px;
+    height: 24px;
+  }
+  &__title {
+    @extend %title;
+    &--orange {
+      color: getColor('text-third');
+    }
+  }
+}
+.buy-list {
+  @include flex(space-between);
+  overflow: auto;
+  &__item {
+    @include flex(flex-end, column);
+    padding: 32px 32px 28px 32px;
+    border-radius: 15px;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    background: getColor('background-secondary');
+  }
+  &__img {
+    width: 167px;
+    height: 148px;
+  }
+}
+.modal-buy-list {
+  @include flex($direction: column);
+  &__label {
+    @include text(12px, 1.16, -0.24px, 500);
+    color: #000;
+  }
+  &__input{
+    max-width: 263px;
+    width: 100%;
+  }
+  &__ukraine{
+    width: 24px;
+    height: 18px;
+  }
+  &__card{
+    width: 21px;
+    height: 12px;
+  }
+  &__btn-submit{
+    @include text($fweight: 600);
+    width: 109px;
+    height: 41px;
+  }
+  &__textarea{
+    resize: none;
+    max-width: 263px;
+    width: 100%;
+  }
+}
