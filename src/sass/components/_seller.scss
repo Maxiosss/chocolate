@@ -1,28 +1,35 @@
 .sellers__title {
   @extend %title;
+  width: 135px;
+  margin: 0 auto 32px;
   color: getColor('text-primary');
-  margin-bottom: 32px;
   &--orange {
     color: getColor('text-third');
   }
 }
 .sellers-list {
   @include flex($direction: column);
+  &__item:nth-child(3){
+    display: none;
+  }
   &__text {
     @include text($lheight: 18px);
-    margin: 20px 0 32px;
+    max-width: 307px;
+    width: 100%;
+    margin: 20px auto 32px;
   }
   &__img {
     width: 335px;
     height: 464px;
-    &:nth-child(3) {
-      display: none;
-    }
   }
 }
 .sellers__button {
+  @include flex;
   @include text($fweight: 600);
+  margin: 0 auto;
   color: getColor('text-secondary');
-  padding: 28px 12px;
+  width: 120px;
+  height: 41px;
   margin-top: 20px;
+  border-radius: 100px;
 }
