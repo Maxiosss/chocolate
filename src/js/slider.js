@@ -1,17 +1,39 @@
 let swiperCards = new Swiper('.product-slider', {
-    loop: true,
-    grabCursor: true, 
+  grabCursor: true,
 
-    keyboard: {
-        enabled: true,
-      },
-    pagination: {
-      el: '.swiper-pagination',
-      clicable:true, 
-      
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  keyboard: {
+    enabled: true,
+  },
+
+  freeMode: true,
+  autoplay: {
+    delay: 2000,
+    stopOnLastSlide: false,
+    disableonInteraction: true,
+  },
+
+  speed: 750,
+
+  breakpoints: {
+    375: {
+      slidesPerView: 1,
+      grabCursor: true,
+      spaceBetween: 0,
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    768: {
+      slidesPerView: 2,
+      grabCursor: true,
+      spaceBetween: 16,
     },
-  });
+    1200: {
+      slidesPerView: 4,
+      grabCursor: true,
+      spaceBetween: 18,
+    },
+  },
+});
