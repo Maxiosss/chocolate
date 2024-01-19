@@ -8,7 +8,7 @@
 
 .hero-background {
     background-image: url(../images/hero/chocobackm.jpg);
-    margin-top: 17px;
+    padding-top: 14px;
     padding: 395px 16px 21px 20px;
     border-radius: 30px;
     background-repeat: no-repeat;
@@ -50,7 +50,7 @@
 
 .hero__title{
     @include text(20px, 24px, -0.6px, 500);
-    color: getColor(background-secondary);
+    color: getColor('background-secondary');
     margin-bottom: 32px;
     @media screen and (min-width: 768px){
         @include text(28px, 34px, -0.84px, 500);
@@ -61,8 +61,6 @@
     display: flex;
     align-items: center;
     gap: 14px;
-    padding: 0;
-    margin: 0;
     &__buy{
         padding: 12px 28px;
         border-radius: 100px;
@@ -106,9 +104,6 @@
 .hero-button-container{
     @media screen and (min-width: 768px){
         @include flex(flex-start);
-        gap: 235px;
-    }
-    @media screen and (min-width: 1200px){
-        gap: 665px;
+        gap: 14px;
     }
 }
