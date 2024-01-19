@@ -28,10 +28,34 @@
   gap: 20px;
 
   &__item {
+    overflow: hidden;
+    position: relative;
     cursor: pointer;
     width: 335px;
     padding: 28px 0;
     border-radius: 15px;
+
+
+    &:hover .back-components {
+      transform: translateX(0%);
+    }
+
+    &:hover:nth-child(1) {
+      border: 1px solid getColor('text-third');
+    }
+
+    
+    &:hover:nth-child(3) {
+      border: 1px solid getColor('text-third');
+    }
+
+
+    &:hover:nth-child(3) {
+      background-color: inherit;
+    }
+    &:hover:nth-child(1) {
+      background-color: inherit;
+    }
     &:nth-child(1) {
       background-color: getColor('text-third');
     }
@@ -48,9 +72,6 @@
     }
 
     .front-components {
-      &:hover .back-components {
-        transform: translateX(2%);
-      }
       &__img {
         width: 335px;
         height: 171px;
@@ -77,7 +98,8 @@
       border-radius: 15px;
       background-color: getColor('background-secondary');
       padding: 28px;
-      transform: translateX(-102%);
+      transform: translateX(-100%);
+      transition: transform 200ms ease-in;
 
       &__title {
         @include text(18px, $lspacing: -0.54px, $fweight: 600);
