@@ -1,17 +1,19 @@
 .footer {
   padding: 32px 20px;
   background-color: getColor('background-third');
-  margin: 0;
 }
 .footer-left {
-  border-bottom: 1px, solid(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  @include flex(space-between, $align: flex-start);
+  padding-bottom: 32px;
 }
-.footer-information-div {
-  @include flex(flex, $justify: space-between);
+.footer-contact-div {
+  @include flex(space-between, column, flex-start);
 }
 .footer__title {
   @include text(24px, 28px, -0.48px, 500);
   color: getColor('text-secondary');
+  margin-bottom:32px;
 }
 .footer__title__span {
   @include text(24px, 28px, -0.48px, 500);
@@ -20,12 +22,10 @@
 .contact__subtitle {
   @include text($lheight: 18px, $fweight: 500);
   color: getColor('text-secondary');
-  margin-bottom: 14px;
 }
 .footer-contact-list {
-  @include flex(flex, $align: flex-start, $direction: column);
+  @include flex($align: flex-start, $direction: column);
   gap: 4px;
-  padding: 0;
 }
 .footer-email__link {
   @include text($lheight: 18px);
@@ -33,21 +33,18 @@
   text-align: center;
 }
 .footer-social-list {
-  @include flex(flex, $align: center);
+  @include flex($align: flex-start);
   gap: 14px;
-  padding: 0;
 }
 .footer-social-svg {
-  color: getColor('text-secondary');
+  fill: getColor('text-secondary');
   width: 22px;
   height: 22px;
 }
 .footer-list {
-  @include flex(flex, $align: flex-start, $direction: column);
-  width: 120px;
-  height: 152px;
+  @include flex($align: flex-start, $direction: column);
+  padding-top:32px;
   gap: 18px;
-  padding: 0;
 }
 .footer-list-item__link {
   @include text($lheight: 16px, $fweight: 500);
