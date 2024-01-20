@@ -4,12 +4,14 @@
 }
 .advantages-list {
   @include flex(space-between,column);
+  gap: 20px;
   .advantages-container {
     @include flex;
     width: 62px;
     height: 62px;
     border-radius: 365px;
     border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 22px;
     &__svg {
       width: 32px;
       height: 32px;
