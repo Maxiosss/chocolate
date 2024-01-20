@@ -4,7 +4,6 @@
   &__title {
     color: getColor('text-primary');
     @extend %title;
-    text-transform: uppercase;
     margin: 0 auto;
     max-width: 247px;
     text-align: center;
