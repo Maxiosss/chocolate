@@ -13,11 +13,10 @@
 .footer__title {
   @include text(24px, 28px, -0.48px, 500);
   color: getColor('text-secondary');
-  margin-bottom:32px;
-}
-.footer__title__span {
-  @include text(24px, 28px, -0.48px, 500);
-  color: getColor('text-third');
+  margin-bottom: 32px;
+  &__span {
+    color: getColor('text-third');
+  }
 }
 .contact__subtitle {
   @include text($lheight: 18px, $fweight: 500);
@@ -43,7 +42,7 @@
 }
 .footer-list {
   @include flex($align: flex-start, $direction: column);
-  padding-top:32px;
+  padding-top: 32px;
   gap: 18px;
 }
 .footer-list-item__link {
