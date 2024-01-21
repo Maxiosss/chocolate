@@ -1,7 +1,7 @@
 .made {
   @include flex;
 }
-.video-box{
+.video-box {
   position: relative;
   width: 335px;
   height: 500px;
@@ -16,7 +16,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%);
-
 }
 .made-right {
   background-color: getColor('background-secondary');
@@ -43,9 +42,6 @@
   @include flex($direction: column);
   gap: 18px;
   list-style-type: disc;
-  &__item {
-
-  }
   &__text {
     @include text($lheight: 18px);
     color: getColor('text-primary');
