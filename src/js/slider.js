@@ -1,5 +1,6 @@
 let swiperCards = new Swiper('.product-slider', {
   grabCursor: true,
+  slides:8,
 
   pagination: {
     el: '.swiper-pagination',
@@ -26,7 +27,7 @@ let swiperCards = new Swiper('.product-slider', {
       spaceBetween: 0,
     },
     768: {
-      slidesPerView: 2,
+      slidesPerView: 2.5,
       grabCursor: true,
       spaceBetween: 16,
     },
