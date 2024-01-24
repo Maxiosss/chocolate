@@ -19,6 +19,7 @@
       (min-resolution: 2dppx) {
       background-image: url('../images/explore/explorebackt@2x.jpg');
     }
+  }
     @media screen and (min-width: 1200px) {
       background-image: url('../images/explore/explorebackd.jpg');
       @media screen and (min-device-pixel-ratio: 2),
@@ -29,8 +30,6 @@
         background-image: url('../images/explore/explorebackd@2x.jpg');
       }
     }
-  }
-
   &__title {
     @extend %title;
     max-width: 291px;
@@ -38,6 +37,10 @@
     color: getColor('text-secondary');
     text-align: center;
     margin: 0 auto;
+    @media screen and (min-width: 768px) {
+      @include text(24px, 1.16, -0.72px, 600);
+      max-width: 378px;
+    }
   }
   &__text {
     @include text($lheight: 1.28);
@@ -46,16 +49,28 @@
     width: 100%;
     color: getColor('text-secondary');
     margin: 24px auto;
+    @media screen and (min-width: 768px) {
+      max-width: 467px;
+    }
   }
   &__button {
+    @include text($fweight: 600);
     @include flex;
     margin: 0 auto;
     width: 128px;
     height: 41px;
     color: getColor('text-secondary');
     border-radius: 100px;
+    @media screen and (min-width: 768px) {
+      @include text(18px, $fweight: 600);
+      width: 172px;
+      height: 50px;
+    }
   }
 }
 .explore .inner-container {
   padding: 62px 20px;
+  @media screen and (min-width: 768px) {
+    padding: 72px 20px;
+  }
 }
