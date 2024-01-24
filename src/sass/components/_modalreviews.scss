@@ -18,5 +18,79 @@
     width: 311px;
     background-color: getColor("background-primary");
     border-radius: 15px;
-    padding: 14px 14px 32px;
+    padding: 32px 24px;
+    position: relative;
 }
+
+.reviews-close{
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+}
+
+.reviews-close__svg{
+    width: 14px;
+    height: 14px;
+}
+
+.reviews-modal__title{
+    color: getColor('text-third');
+    @include text(20px, 24px, -0.6px, 600, uppercase);
+    margin-bottom: 32px;
+}
+
+.reviews-modal__span{
+    color: getColor('text-primary');
+    @include text(20px, 24px, -0.6px, 600, uppercase);
+}
+
+
+.send-btn{
+    padding: 12px 28px;
+    border-radius: 100px;
+    @include text($fweight: 600);
+    color: getColor('background-secondary');
+    margin-top: 18px;
+}
+
+ .modal-list__input{
+    width: 263px;
+    @include flex($align: flex-start);
+    padding: 14px 18px;
+    border-radius: 8px;
+    border: 1.5px solid getColor('border-modal');
+    box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+ }
+
+.label-list__modal{
+    position: relative;
+    
+}
+
+.label-list__svg{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 24px;
+    height: 18px;
+}
+
+ .modal-list{
+    @include flex($direction: column);
+    gap: 14px;
+ }
+
+ .modal-list__input--phone{
+    padding-left: 82px;
+    border-left: 1.5px solid rgba(17, 17, 17, 0.05);
+ }
+
+ .modal-list__input--text{
+    width: 263px;
+    padding: 14px 18px 60px 18px;
+    resize: none;
+ }
