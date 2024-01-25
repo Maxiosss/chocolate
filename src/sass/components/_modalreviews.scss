@@ -1,9 +1,5 @@
-// .reviews-modal__title{
-//     @include text(20px, 24px, -0.6px, 600, uppercase);
-// }
-
 .backdrop-review{
-    @include flex($direction: column);
+    @include flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -20,6 +16,24 @@
     border-radius: 15px;
     padding: 32px 24px;
     position: relative;
+
+    @media screen and(min-width: 768px){
+        width: 517px;
+        padding: 40px;
+    }
+
+    &__title {
+        color: getColor('text-third');
+        @extend %title;
+        margin-bottom: 32px;
+        @media screen and(min-width: 768px){
+            max-width: 288px;
+        }
+    }
+
+    &__span {
+        color: getColor('text-primary');
+    }
 }
 
 .reviews-close{
@@ -30,23 +44,13 @@
     height: 24px;
     border: none;
     background-color: transparent;
+
+    &__svg {
+        width: 14px;
+        height: 14px;
+    }
 }
 
-.reviews-close__svg{
-    width: 14px;
-    height: 14px;
-}
-
-.reviews-modal__title{
-    color: getColor('text-third');
-    @include text(20px, 24px, -0.6px, 600, uppercase);
-    margin-bottom: 32px;
-}
-
-.reviews-modal__span{
-    color: getColor('text-primary');
-    @include text(20px, 24px, -0.6px, 600, uppercase);
-}
 
 
 .send-btn{
@@ -57,14 +61,6 @@
     margin-top: 18px;
 }
 
- .modal-list__input{
-    width: 263px;
-    @include flex($align: flex-start);
-    padding: 14px 18px;
-    border-radius: 8px;
-    border: 1.5px solid getColor('border-modal');
-    box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
- }
 
 .label-list__modal{
     position: relative;
@@ -73,24 +69,44 @@
 
 .label-list__svg{
     position: absolute;
-    top: 15px;
+    top: 20px;
     left: 15px;
     width: 24px;
     height: 18px;
+    @media screen and(min-width: 768px) {
+        width: 32px;
+        height: 24px;
+    }
 }
 
  .modal-list{
     @include flex($direction: column);
     gap: 14px;
- }
 
- .modal-list__input--phone{
-    padding-left: 82px;
-    border-left: 1.5px solid rgba(17, 17, 17, 0.05);
- }
+    &__input{
+        width: 263px;
+        @include flex($align: flex-start);
+        padding: 14px 18px;
+        border-radius: 8px;
+        border: 1.5px solid getColor('border-modal');
+        box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+        @media screen and(min-width: 768px){
+            width: 437px;
+            padding: 22px 24px;
+        }
+        &--phone {
+            padding-left: 55px;
+            border-left: 1.5px solid rgba(17, 17, 17, 0.05);
+        }
 
- .modal-list__input--text{
-    width: 263px;
-    padding: 14px 18px 60px 18px;
-    resize: none;
+        &--text {
+            width: 263px;
+            padding: 14px 18px 60px 18px;
+            resize: none;
+            @media screen and(min-width: 768px) {
+                    width: 437px;
+                    padding: 22px 24px 93px 24px;
+                }
+        }
+    }
  }
