@@ -4,7 +4,7 @@
 }
 
 .reviews__title{
-    @include text(20px, 24px, -0,6px, 600);
+    @extend %title;
     text-transform: uppercase;
     color: getColor('text-primary');
     text-align: center;
