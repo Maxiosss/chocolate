@@ -1,0 +1,2 @@
+var swiperCards=new Swiper(".product-slider",{grabCursor:!0,slides:8,pagination:{el:".swiper-pagination",clickable:!0},keyboard:{enabled:!0},freeMode:!0,autoplay:{delay:2e3,stopOnLastSlide:!1,disableonInteraction:!0},speed:750,breakpoints:{375:{slidesPerView:1,grabCursor:!0,spaceBetween:0},768:{slidesPerView:2.5,grabCursor:!0,spaceBetween:16},1200:{slidesPerView:4,grabCursor:!0,spaceBetween:18}}});
+//# sourceMappingURL=index.aa522e21.js.map
