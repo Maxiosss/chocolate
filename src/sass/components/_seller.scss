@@ -6,30 +6,51 @@
   &--orange {
     color: getColor('text-third');
   }
+  @media screen and (min-width: 768px) {
+    @include text(24px, 1.16, -0.72px, 600);
+  }
 }
 .sellers-list {
   @include flex($direction: column);
-  &__item:nth-child(3){
+  @media screen and (min-width: 768px) {
+    @include flex;
+    column-gap: 16px;
+  }
+  &__item:nth-child(3) {
     display: none;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
   }
   &__text {
-    @include text($lheight: 18px);
+    @include text($lheight: 1.28);
     max-width: 307px;
     width: 100%;
     margin: 20px auto 32px;
+    @media screen and (min-width: 768px) {
+      margin: 32px 236px 0 auto;
+    }
   }
   &__img {
     width: 335px;
     height: 464px;
+    @media screen and (min-width: 768px) {
+      width: 344px;
+    }
   }
 }
 .sellers__button {
   @include flex;
   @include text($fweight: 600);
-  margin: 0 auto;
+  margin: 20px auto 0;
   color: getColor('text-secondary');
   width: 120px;
   height: 41px;
-  margin-top: 20px;
   border-radius: 100px;
+  @media screen and (min-width: 768px) {
+    margin: 32px 32px 0 0;
+    width: 162px;
+    height: 50px;
+    @include text(18px, $fweight: 600);
+  }
 }
