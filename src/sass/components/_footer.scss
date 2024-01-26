@@ -49,3 +49,38 @@
   @include text($lheight: 16px, $fweight: 500);
   color: getColor('text-secondary');
 }
+@media (min-width: 768px) {
+  footer {
+    padding: 50px 32px;
+  }
+  .footer-left {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    @include flex(space-between, $align: flex-start);
+    padding-bottom: 24px;
+  }
+  .footer__title {
+    @include text(28px, 34px, -0.56px, 500, normal);
+    color: getColor('text-secondary');
+    margin-bottom: 54px;
+    &__span {
+      color: getColor('text-third');
+    }
+  }
+  .contact__subtitle {
+    @include text($lheight: 18px, $fweight: 500);
+    color: getColor('text-secondary');
+  }
+  .footer-social-list {
+    @include flex($align: flex-start);
+    gap: 18px;
+  }
+  .footer-social-svg {
+    fill: getColor('text-secondary');
+    width: 24px;
+    height: 24px;
+  }
+  .footer-list {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 24px;}
+}
