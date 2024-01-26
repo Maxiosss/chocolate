@@ -67,6 +67,9 @@
   }
 }
 .modal-subscribe__btn-submit {
+  position: absolute;
+  bottom: 32px;
+  right: 24px;
   border-radius: 100px;
   @include text($fweight: 600);
   width: 100px;
