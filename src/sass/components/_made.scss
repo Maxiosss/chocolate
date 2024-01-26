@@ -53,17 +53,54 @@
     width: 614px;
     height: 400px;
     margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
   }
   .made-video__svg {
     width: 44px;
     height: 44px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
   }
   .made-right {
     padding: 32px 32px;
     width: 614px;
     height: 356px;
     margin: 0 auto;
-    @include flex($direction:none);
+  }
+  .made__title {
+    margin-bottom: 50px;
+    @include text(24px, 28px, -0.72, 600, normal);
+  }
+  .made__subtitle {
+    @include text($fsize: 18px, $fweight: 600);
+    margin-bottom: 28px;
+  }
+  .made-list {
+    @include flex($align: flex-start, $direction: column);
+  }
+}
+@media (min-width: 1200px) {
+  .video-box {
+    width: 600px;
+    height: 400px;
+    position: relative;
+  }
+  .made-video__svg {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .made-right {
+    padding: 32px 32px;
+    width: 516px;
+    height: 400px;
+    @include flex(flex, $justify: center, $align: center);
   }
   .made__title {
     margin-bottom: 50px;
