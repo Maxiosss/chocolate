@@ -1,0 +1,202 @@
+.components {
+  padding: 72px 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 100px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 128px 0;
+  }
+
+  &__title {
+    color: getColor('text-primary');
+    @extend %title;
+    margin: 0 auto;
+    max-width: 247px;
+    text-align: center;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+      max-width: 411px;
+      @include text(24px, 28px, -0.72, 600);
+      margin-bottom: 28px;
+    }
+
+    &--orange {
+      color: getColor('text-third');
+    }
+  }
+  &__description {
+    @include text($lheight: 18px);
+    max-width: 335px;
+    text-align: center;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+      max-width: 486px;
+    }
+  }
+}
+
+.components-list {
+  margin-top: 32px;
+  @include flex($direction: column);
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 50px;
+    gap: 32px;
+    @include flex($wrap: wrap);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex;
+    gap: 19px;
+  }
+
+  &__item {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    width: 335px;
+    padding: 28px 0;
+    border-radius: 15px;
+
+    @media screen and (min-width: 768px) {
+      width: 336px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+      padding: 28px 36px 28px 28px;
+    }
+
+    &:hover .back-components {
+      transform: translateX(0%);
+    }
+
+    &:hover:nth-child(1) {
+      border: 1px solid getColor('text-third');
+    }
+
+    &:hover:nth-child(3) {
+      border: 1px solid getColor('text-third');
+    }
+
+    &:hover:nth-child(3) {
+      background-color: inherit;
+      transition: background-color 100ms ease-in;
+    }
+    &:hover:nth-child(1) {
+      background-color: inherit;
+      transition: background-color 100ms ease-in;
+    }
+    &:nth-child(1) {
+      background-color: getColor('text-third');
+    }
+    &:nth-child(2) {
+      background-color: getColor('background-secondary');
+      border: 1px solid getColor('text-third');
+    }
+    &:nth-child(3) {
+      background-color: getColor('background-third');
+    }
+    &:nth-child(4) {
+      background-color: getColor('background-secondary');
+      border: 1px solid getColor('text-third');
+    }
+
+    .front-components {
+      &__img {
+        margin: 0 auto;
+        width: 335px;
+        height: 171px;
+
+        @media screen and (min-width: 768px) {
+          width: 224px;
+          height: 171px;
+        }
+
+        @media screen and (min-width: 1200px) {
+          width: 206px;
+          height: 160px;
+        }
+      }
+
+      &__title {
+        margin-top: 25px;
+        margin-left: 28px;
+        @include text($lheight: 18px, $fweight: 600);
+        color: getColor('text-secondary');
+        text-transform: uppercase;
+
+        @media screen and (min-width: 1200px) {
+          margin-top: 36px;
+          margin-left: 0;
+        }
+
+        &--black {
+          color: getColor('text-primary');
+        }
+      }
+    }
+
+    .back-components {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 335px;
+      border-radius: 15px;
+      background-color: getColor('background-secondary');
+      padding: 28px;
+      transform: translateX(-100%);
+      transition: transform 300ms ease-in;
+      overflow: auto;
+
+      @media screen and (min-width: 1200px) {
+        width: 270px;
+      }
+
+      &__title {
+        @include text(18px, $lspacing: -0.54px, $fweight: 600);
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      .back-components-info {
+        display: flex;
+        gap: 6px;
+        margin-bottom: 14px;
+
+        &__type {
+          @include text(10px, 12px, 0);
+          color: getColor('text-secondary');
+          text-align: center;
+          border-radius: 35px;
+          padding: 6px 16px;
+        }
+
+        &__benefits {
+          @include text(10px, 12px, 0);
+          color: getColor('text-primary');
+          border-radius: 35px;
+          padding: 6px 16px;
+          background-color: getColor('background-secondary');
+          border: 1px solid getColor('text-third');
+        }
+      }
+
+      &__paragraph {
+        @include text($lheight: 18px);
+        max-width: 279px;
+        color: getColor('text-primary');
+        overflow: auto;
+
+        @media screen and (min-width: 1200px) {
+          max-width: 214px;
+        }
+      }
+    }
+  }
+}

@@ -1,12 +1,12 @@
-<div class="backdrop is-hidden" data-form-backdrop>
+<div class="backdrop-buy is-hidden">
   <form class="modal-buy">
-    <button type="button" class="modal-close" data-modal-close>
-      <svg class="modal-close__icon">
+    <button type="button" class="modal-buy-close__btn" data-close-buy>
+      <svg class="modal-buy-close__icon">
         <use href="./images/symbol-defs.svg#icon-cross"></use>
       </svg>
     </button>
-    <h2 class="modal__title">
-      <span class="modal__title--orange">Buy</span> now
+    <h2 class="modal-buy__title">
+      <span class="modal-buy__title--orange">Buy</span> now
     </h2>
     <ul class="buy-list">
       <li class="buy-list__item">
@@ -25,9 +25,9 @@
             "
             media="(max-width: 767px)"
           />
-          <img src="./images/modal/chocom.png" alt="chocolate" />
+          <img src="./images/modal/chocom.png" alt="chocolate" class="buy-list__img" />
         </picture>
-        <button class="buy-list__gram">100g</button>
+        <button class="buy-list__grams">100g</button>
       </li>
       <li class="buy-list__item">
         <picture>
@@ -45,9 +45,9 @@
             "
             media="(max-width: 767px)"
           />
-          <img src="./images/modal/chocomixm.png" alt="chocolate" />
+          <img src="./images/modal/chocomixm.png" alt="chocolate" class="buy-list__img" />
         </picture>
-        <button class="buy-list__gram">200 g</button>
+        <button class="buy-list__grams">200 g</button>
       </li>
       <li class="buy-list__item">
         <picture>
@@ -65,70 +65,70 @@
             "
             media="(max-width: 767px)"
           />
-          <img src="./images/modal/chocobarsm.png" alt="chocolate" />
+          <img src="./images/modal/chocobarsm.png" alt="chocolate" class="buy-list__img" />
         </picture>
-        <button class="buy-list__gram">300 g</button>
+        <button class="buy-list__grams">300 g</button>
       </li>
     </ul>
-    <ul class="modal-list">
-      <li class="modal-list__item">
-        <label class="modal-list__label">
+    <ul class="modal-buy-list">
+      <li class="modal-buy-list__item">
+        <label class="modal-buy-list__label">
           Personal information
           <input
             type="text"
-            class="modal-list__input"
+            class="modal-buy-list__input"
             required
             placeholder="Name"
           />
         </label>
-        <label class="modal-list__label">
-          <input type="text" class="modal-list__input" placeholder="Surname" />
+        <label class="modal-buy-list__label">
+          <input type="text" class="modal-buy-list__input" placeholder="Surname" />
         </label>
       </li>
-      <li class="modal-list__item">
-        <label class="modal-list__label">
+      <li class="modal-buy-list__item">
+        <label class="modal-buy-list__label">
           Email
           <input
             type="email"
-            class="modal-list__input"
+            class="modal-buy-list__input"
             required
             placeholder="Enter your email"
           />
         </label>
       </li>
-      <li class="modal-list__item">
-        <label class="modal-list__label">
+      <li class="modal-buy-list__item">
+        <label class="modal-buy-list__label">
           Phone Number
           <input
             type="tel"
-            class="modal-list__input"
+            class="modal-buy-list__input modal-buy-list__input--phone"
             required
             placeholder="Phone number"
           />
-          <svg>
+          <svg class="modal-buy-list__ukraine">
             <use href="./images/symbol-defs.svg#icon-ukraine"></use>
           </svg>
         </label>
       </li>
-      <li class="modal-list__item">
-        <label class="modal-list__label">
+      <li class="modal-buy-list__item">
+        <label class="modal-buy-list__label">
           Card number
           <input
             type="number"
-            class="modal-list__input"
+            class="modal-buy-list__input"
             required
             placeholder="Enter card"
           />
-          <svg>
+          <svg class="modal-buy-list__card">
             <use href="./images/symbol-defs.svg#icon-mastercard"></use>
           </svg>
         </label>
       </li>
-      <li class="modal-list__item">
-        <label class="modal-list__label"
+      <li class="modal-buy-list__item">
+        <label class="modal-buy-list__label"
           >Comment
           <textarea
-            class="modal-list__textarea"
+            class="modal-buy-list__textarea"
             cols="30"
             rows="10"
             placeholder="Enter text"
@@ -136,7 +136,7 @@
         </label>
       </li>
     </ul>
-    <button type="submit" class="modal__btn-submit" data-open-info-modal>
+    <button type="submit" class="modal-buy__btn-submit" data-open-thanks>
       Submit
     </button>
   </form>
