@@ -1,10 +1,43 @@
 .advantages {
   padding: 20px 0;
-  background-color: #1e1823;
+  background-color: getColor('background-third');
+
+  @media screen and (min-width: 768px) {
+    padding: 50px 0;
+  }
 }
 .advantages-list {
-  @include flex(space-between,column);
+  @include flex(space-between, column);
   gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    @include flex(space-between, $align: flex-start, $wrap: wrap);
+    row-gap: 60px;
+    column-gap: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: 70px;
+  }
+
+  &__item {
+    @media screen and (min-width: 768px) {
+      max-width: 308px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      position: relative;
+
+      &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 60px;
+        right: -18px;
+        width: 1px;
+        height: 124px;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
   .advantages-container {
     @include flex;
     width: 62px;
@@ -19,7 +52,7 @@
     }
   }
   &__title {
-    @include text(18px, $fweight:600);
+    @include text(18px, $fweight: 600);
     color: #fff;
     margin-bottom: 18px;
   }
