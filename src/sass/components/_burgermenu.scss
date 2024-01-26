@@ -1,11 +1,15 @@
-.container-menu{
-    position: relative;
+.mobile-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
     width: 220px;
     height: 100%;
     background-color: getColor("background-third");
     padding: 136px 0 20px;
     @media screen and (min-width: 768px) {
         width: 290px;
+        padding: 156px 0 24px;
     }
     @media screen and (min-width: 1200px) {
         display: none;
@@ -20,9 +24,19 @@
     position: absolute;
     top: 20px;
     right: 20px;
+    @media screen and (min-width: 768px) {
+        top: 24px;
+        right: 24px;
+    }
+    @include flex;
+    cursor: pointer;
     &__svg{
         width: 14px;
         height: 14px;
+        @media screen and (min-width: 768px) {
+            width: 16px;
+            height: 16px;
+        }
         fill: getColor("background-primary");
         &:hover{
             fill: getColor("text-third");
@@ -38,9 +52,14 @@
         width: 22px;
         height: 22px;
         fill: getColor("background-primary");
+        @media screen and (min-width: 1200px) {
+            width: 24px;
+            height: 24px;
+        }
         &:hover {
             fill: getColor("text-third");
         }
+
     }
 }
 
