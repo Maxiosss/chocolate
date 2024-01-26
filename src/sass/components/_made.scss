@@ -19,7 +19,7 @@
   transform: translate(-50%);
 }
 .made-right {
-  @include flex($direction: column);
+  @include flex(flex-start,$align:flex-start, $direction: column);
   background-color: getColor('background-secondary');
   border-radius: 15px;
   padding: 20px 14px;
@@ -77,12 +77,17 @@
   .made__subtitle {
     @include text($fsize: 18px, $fweight: 600);
     margin-bottom: 28px;
+    max-width: 350px;
   }
   .made-list {
     @include flex($align: flex-start, $direction: column);
   }
 }
 @media (min-width: 1200px) {
+  .video-info {
+    @include flex();
+    gap: 20px;
+  }
   .video-box {
     width: 600px;
     height: 400px;
@@ -100,7 +105,6 @@
     padding: 32px 32px;
     width: 516px;
     height: 400px;
-    @include flex(flex, $justify: center, $align: center);
   }
   .made__title {
     margin-bottom: 50px;
