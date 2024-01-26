@@ -1,11 +1,13 @@
 .footer {
-  padding: 32px 20px;
+  padding: 32px 0;
   background-color: getColor('background-third');
 }
 .footer-left {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   @include flex(space-between, $align: flex-start);
   padding-bottom: 32px;
+}
+.footer-top{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .footer-contact-div {
   @include flex(space-between, column, flex-start);
@@ -14,6 +16,7 @@
   @include text(24px, 28px, -0.48px, 500);
   color: getColor('text-secondary');
   margin-bottom: 32px;
+  max-width: 300px;
   &__span {
     color: getColor('text-third');
   }
@@ -21,13 +24,14 @@
 .contact__subtitle {
   @include text($lheight: 18px, $fweight: 500);
   color: getColor('text-secondary');
+  margin-bottom: 14px;
 }
 .footer-contact-list {
   @include flex($align: flex-start, $direction: column);
   gap: 4px;
 }
 .footer-email__link {
-  @include text($lheight: 18px);
+  @include text($lheight: 1.28);
   color: getColor('text-secondary');
   text-align: center;
 }
@@ -53,10 +57,14 @@
   footer {
     padding: 50px 32px;
   }
+  .footer-top {
+    @include flex($justify: space-between, $align: flex-start);
+  }
   .footer-left {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
     @include flex(space-between, $align: flex-start);
     padding-bottom: 24px;
+    gap:50px;
   }
   .footer__title {
     @include text(28px, 34px, -0.56px, 500, normal);
@@ -80,7 +88,7 @@
     height: 24px;
   }
   .footer-list {
-    display: inline-flex;
-    align-items: flex-start;
-    gap: 24px;}
+    @include flex($align: flex-start, $direction:row);
+    gap: 24px;
+  }
 }
