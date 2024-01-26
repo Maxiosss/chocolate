@@ -1,11 +1,10 @@
 .reviews{
-    margin: 72px 0;
+    padding: 72px 0;
     @include flex($direction: column);
 }
 
 .reviews__title{
     @extend %title;
-    text-transform: uppercase;
     color: getColor('text-primary');
     text-align: center;
     margin-bottom: 74px;
