@@ -19,7 +19,7 @@
   transform: translate(-50%);
 }
 .made-right {
-  @include flex(flex-start,$align:flex-start, $direction: column);
+  @include flex(flex-start, $align: flex-start, $direction: column);
   background-color: getColor('background-secondary');
   border-radius: 15px;
   padding: 20px 14px;
