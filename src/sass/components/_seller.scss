@@ -2,9 +2,9 @@
   @extend %title;
   text-align: center;
   margin-bottom: 32px;
-  color: getColor("text-primary");
+  color: getColor('text-primary');
   &--orange {
-    color: getColor("text-third");
+    color: getColor('text-third');
   }
   @media screen and (min-width: 768px) {
     @include text(24px, 1.16, -0.72px, 600);
@@ -45,6 +45,7 @@
       margin: 20px auto 0;
       @media screen and (min-width: 768px) {
         margin: 32px 0 40px 0;
+        order: 5;
       }
     }
   }
@@ -69,7 +70,7 @@
 }
 .sellers__button {
   @include text($fweight: 600);
-  color: getColor("text-secondary");
+  color: getColor('text-secondary');
   width: 120px;
   height: 41px;
   border-radius: 100px;
