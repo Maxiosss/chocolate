@@ -63,10 +63,6 @@
     padding: 28px 0;
     border-radius: 15px;
 
-    @media screen and (min-width: 768px) {
-      width: 336px;
-    }
-
     @media screen and (min-width: 1200px) {
       width: 270px;
       padding: 28px 36px 28px 28px;
@@ -110,13 +106,8 @@
     .front-components {
       &__img {
         margin: 0 auto;
-        width: 335px;
+        width: 224px;
         height: 171px;
-
-        @media screen and (min-width: 768px) {
-          width: 224px;
-          height: 171px;
-        }
 
         @media screen and (min-width: 1200px) {
           width: 206px;
@@ -152,16 +143,13 @@
       padding: 28px;
       transform: translateX(-100%);
       transition: transform 300ms ease-in;
-      overflow: auto;
-
-      @media screen and (min-width: 1200px) {
-        width: 270px;
-      }
+      overflow: hidden;
 
       &__title {
         @include text(18px, $lspacing: -0.54px, $fweight: 600);
         text-transform: uppercase;
         margin-bottom: 8px;
+        max-width: 170px;
       }
 
       .back-components-info {
@@ -192,9 +180,11 @@
         max-width: 279px;
         color: getColor('text-primary');
         overflow: auto;
+        max-height: 146px;
 
         @media screen and (min-width: 1200px) {
           max-width: 214px;
+  
         }
       }
     }
