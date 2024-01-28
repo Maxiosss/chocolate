@@ -1,5 +1,4 @@
 .backdrop-review{
-    @include flex;
     position: fixed;
     top: 0;
     left: 0;
@@ -33,7 +32,7 @@
         @media screen and(min-width: 768px){
             max-width: 298px;
             font-size: 24px;
-            line-height: 1.16px;
+            line-height: 1.16;
             letter-spacing: -0.72px;
             margin-bottom: 40px;
         }
@@ -102,7 +101,7 @@
 }
 
  .modal-list{
-    @include flex($direction: column);
+    @include flex($direction: column, $align: stretch);
     gap: 14px;
 
     &__input{
@@ -126,7 +125,7 @@
             padding: 14px 18px;
             resize: none;
             border-radius: 8px;
-            border: 1.5px solid getColor('text-fourth');
+            border: 1.5px solid getColor('border-modal');
             box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
             @media screen and(min-width: 768px) {
                     height: 137px;
