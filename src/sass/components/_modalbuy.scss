@@ -14,6 +14,7 @@
   left: 50%;
   transform: translate(-50%);
   width: 312px;
+  max-height: 1007px;
   height: 90vh;
   overflow: auto;
   padding: 32px 24px;
@@ -25,7 +26,7 @@
     position: absolute;
     top: 14px;
     right: 14px;
-    color: transparent;
+    background-color: transparent;
     width: 24px;
     height: 24px;
   }
@@ -59,7 +60,7 @@
     margin: 0 auto 16px;
   }
   &__grams {
-    @include flex($align: flex-start);
+    @include flex;
     width: 96px;
     height: 33px;
     border-radius: 100px;
@@ -92,9 +93,9 @@
     &:nth-child(2) {
       margin-top: 14px;
     }
-    &::placeholder{
+    &::placeholder {
       @include text;
-      color: rgba(64, 64, 64, 0.30);
+      color: rgba(64, 64, 64, 0.3);
     }
   }
   &__ukraine {
@@ -123,9 +124,15 @@
   }
   &__btn-submit {
     @include text($fweight: 600);
+    color: getColor('text-secondary');
     width: 109px;
     height: 41px;
     margin-top: 18px;
+    border-radius: 100px;
+    @media screen and (min-width: 768px) {
+      width: 135px;
+      height: 45px;
+    }
   }
 }
 input::-webkit-outer-spin-button,
