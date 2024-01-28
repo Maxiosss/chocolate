@@ -45,7 +45,7 @@
   height: 22px;
 }
 .footer-list {
-  @include flex($align: flex-start, $direction: column);
+  @include flex($justify: flex-start, $direction: column);
   padding-top: 32px;
   gap: 18px;
 }
@@ -87,12 +87,16 @@
     height: 24px;
   }
   .footer-list {
-    @include flex($align: flex-start, $direction: row);
+    @include flex($justify: flex-start, $align: flex-start, $direction: row);
     gap: 24px;
   }
 }
 @media (min-width: 1200px) {
   .footer-top {
     gap: 63px;
+  }
+  .footer-list {
+    @include flex($justify: flex-start, $align: flex-start, $direction: row);
+    gap: 24px;
   }
 }
