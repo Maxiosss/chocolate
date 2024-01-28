@@ -22,7 +22,7 @@
   @media screen and(min-width: 768px) {
     width: 516px;
     height: 414px;
-    padding: 163px 49px 163px 170px;
+    padding: 154px 49px 154px 170px;
   }
 
   &__btn {
@@ -65,7 +65,7 @@
   &__text {
     @include text($lheight: 1.14);
     color: getColor('background-secondary');
-    max-width: 165px;
+    max-width: 219px;
     @media screen and(min-width: 768px) {
       @include text(18px, 1.33, -0.38px, 400);
       max-width: 100%;
