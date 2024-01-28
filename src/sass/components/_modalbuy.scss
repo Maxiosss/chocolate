@@ -14,13 +14,16 @@
   left: 50%;
   transform: translate(-50%);
   width: 312px;
-  max-height: 1007px;
   height: 90vh;
   overflow: auto;
   padding: 32px 24px;
   border-radius: 15px;
   z-index: 100;
   background-color: getColor('background-primary');
+  @media screen and (min-width: 768px) {
+    width: 609px;
+    padding: 48px;
+  }
   &-close__btn {
     @include flex;
     position: absolute;
@@ -32,7 +35,8 @@
     @media screen and (min-width: 768px) {
       width: 28px;
       height: 28px;
-      
+      top: 24px;
+      right: 24px;
     }
   }
   &-close__icon {
