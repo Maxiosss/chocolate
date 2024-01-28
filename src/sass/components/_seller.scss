@@ -47,6 +47,9 @@
         margin: 32px 0 40px 0;
         order: 5;
       }
+      @media screen and (min-width: 1200px) {
+        margin: 32px 0 22px 0;
+      }
     }
   }
   &__text {
