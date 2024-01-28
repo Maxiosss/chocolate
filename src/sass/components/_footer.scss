@@ -6,7 +6,7 @@
   @include flex(space-between, $align: flex-start);
   padding-bottom: 32px;
 }
-.footer-top{
+.footer-top {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .footer-contact-div {
@@ -22,7 +22,7 @@
   }
 }
 .contact__subtitle {
-  @include text($lheight: 18px, $fweight: 500);
+  @include text($lheight: 1.28, $fweight: 500);
   color: getColor('text-secondary');
   margin-bottom: 14px;
 }
@@ -59,12 +59,12 @@
   }
   .footer-top {
     @include flex($justify: space-between, $align: flex-start);
+    gap: 50px;
   }
   .footer-left {
-
     @include flex(space-between, $align: flex-start);
     padding-bottom: 24px;
-    gap:50px;
+    gap: 50px;
   }
   .footer__title {
     @include text(28px, 34px, -0.56px, 500, normal);
@@ -75,7 +75,6 @@
     }
   }
   .contact__subtitle {
-    @include text($lheight: 18px, $fweight: 500);
     color: getColor('text-secondary');
   }
   .footer-social-list {
@@ -88,7 +87,12 @@
     height: 24px;
   }
   .footer-list {
-    @include flex($align: flex-start, $direction:row);
+    @include flex($align: flex-start, $direction: row);
     gap: 24px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer-top {
+    gap: 63px;
   }
 }
