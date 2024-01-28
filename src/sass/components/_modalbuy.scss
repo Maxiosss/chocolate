@@ -29,6 +29,11 @@
     background-color: transparent;
     width: 24px;
     height: 24px;
+    @media screen and (min-width: 768px) {
+      width: 28px;
+      height: 28px;
+      
+    }
   }
   &-close__icon {
     width: 12px;
@@ -75,12 +80,7 @@
   &__label {
     @include text(12px, 1.16, -0.24px, 500);
     color: #000;
-    &:nth-child(4) {
-      position: relative;
-    }
-    &:nth-child(5) {
-      position: relative;
-    }
+    position: relative;
   }
   &__input {
     padding: 14px 18px;
@@ -96,6 +96,9 @@
     &::placeholder {
       @include text;
       color: rgba(64, 64, 64, 0.3);
+      @media screen and (min-width: 768px) {
+        @include text(18px, $lspacing: -0.36px);
+      }
     }
   }
   &__ukraine {
@@ -104,6 +107,10 @@
     height: 18px;
     top: 35px;
     left: 18px;
+    @media screen and (min-width: 768px) {
+      width: 32px;
+      height: 24px;
+    }
   }
   &__card {
     position: absolute;
@@ -111,6 +118,10 @@
     height: 12px;
     top: 35px;
     right: 14px;
+    @media screen and (min-width: 768px) {
+      width: 30px;
+      height: 18px;
+    }
   }
   &__textarea {
     padding: 14px 18px;
@@ -121,6 +132,9 @@
     border-radius: 8px;
     border: 1.5px solid rgba(17, 17, 17, 0.05);
     box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+    @media screen and (min-width: 768px) {
+      max-width: 513px;
+    }
   }
   &__btn-submit {
     @include text($fweight: 600);
@@ -130,7 +144,7 @@
     margin-top: 18px;
     border-radius: 100px;
     @media screen and (min-width: 768px) {
-      width: 135px;
+      width: 133px;
       height: 45px;
     }
   }
