@@ -149,12 +149,7 @@
         @include text(18px, $lspacing: -0.54px, $fweight: 600);
         text-transform: uppercase;
         margin-bottom: 8px;
-
-        .semi {
-          @media screen and (min-width: 1200px) {
-            max-width: 140px;
-          }
-        }
+        max-width: 170px;
       }
 
       .back-components-info {
