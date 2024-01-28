@@ -2,9 +2,9 @@
   @extend %title;
   text-align: center;
   margin-bottom: 32px;
-  color: getColor('text-primary');
+  color: getColor("text-primary");
   &--orange {
-    color: getColor('text-third');
+    color: getColor("text-third");
   }
   @media screen and (min-width: 768px) {
     @include text(24px, 1.16, -0.72px, 600);
@@ -13,22 +13,47 @@
 .sellers-list {
   @include flex($direction: column);
   @media screen and (min-width: 768px) {
-    @include flex;
-    column-gap: 16px;
+    @include flex(left, $wrap: wrap);
   }
-  &__item:nth-child(3) {
-    display: none;
-    @media screen and (min-width: 1200px) {
-      display: flex;
+  &__item {
+    display: flex;
+    &:nth-child(4) {
+      display: none;
+      @media screen and (min-width: 1200px) {
+        display: flex;
+      }
+    }
+    &:nth-child(3) {
+      @media screen and (min-width: 768px) {
+        margin-left: 16px;
+      }
+      @media screen and (min-width: 1200px) {
+        margin-right: 16px;
+      }
+    }
+    &:nth-child(2) {
+      margin: 20px 0 32px;
+      @media screen and (min-width: 768px) {
+        margin: 32px 236px 0 0;
+        order: 3;
+      }
+      @media screen and (min-width: 1200px) {
+        margin: 32px 567px 0 0;
+      }
+    }
+    &:nth-child(5) {
+      margin: 20px auto 0;
+      @media screen and (min-width: 768px) {
+        margin: 32px 0 40px 0;
+      }
     }
   }
   &__text {
     @include text($lheight: 1.28);
-    max-width: 307px;
+    max-width: 306px;
     width: 100%;
-    margin: 20px auto 32px;
-    @media screen and (min-width: 768px) {
-      margin: 32px 236px 0 auto;
+    @media screen and (min-width: 1200px) {
+      max-width: 407px;
     }
   }
   &__img {
@@ -37,18 +62,18 @@
     @media screen and (min-width: 768px) {
       width: 344px;
     }
+    @media screen and (min-width: 1200px) {
+      width: 368px;
+    }
   }
 }
 .sellers__button {
-  @include flex;
   @include text($fweight: 600);
-  margin: 20px auto 0;
-  color: getColor('text-secondary');
+  color: getColor("text-secondary");
   width: 120px;
   height: 41px;
   border-radius: 100px;
   @media screen and (min-width: 768px) {
-    margin: 32px 32px 0 0;
     width: 162px;
     height: 50px;
     @include text(18px, $fweight: 600);
