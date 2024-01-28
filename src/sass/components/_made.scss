@@ -5,6 +5,7 @@
   position: relative;
   width: 335px;
   height: 500px;
+  margin-bottom: 20px;
 }
 .made-video {
   border-radius: 15px;
@@ -18,10 +19,10 @@
   transform: translate(-50%);
 }
 .made-right {
+  @include flex(flex-start, $align: flex-start, $direction: column);
   background-color: getColor('background-secondary');
   border-radius: 15px;
   padding: 20px 14px;
-  margin-top: 20px;
 }
 .made__title {
   color: getColor('text-primary');
@@ -45,5 +46,72 @@
   &__text {
     @include text($lheight: 18px);
     color: getColor('text-primary');
+  }
+}
+@media (min-width: 768px) {
+  .video-box {
+    width: 614px;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .made-video__svg {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .made-right {
+    padding: 32px 32px;
+    width: 614px;
+    height: 356px;
+    margin: 0 auto;
+  }
+  .made__title {
+    margin-bottom: 50px;
+    @include text(24px, 28px, -0.72, 600, normal);
+  }
+  .made__subtitle {
+    @include text($fsize: 18px, $fweight: 600);
+    margin-bottom: 28px;
+    max-width: 350px;
+  }
+  .made-list {
+    @include flex($align: flex-start, $direction: column);
+  }
+}
+@media (min-width: 1200px) {
+  .video-info {
+    @include flex();
+    gap: 20px;
+  }
+  .video-box {
+    width: 600px;
+    height: 400px;
+    position: relative;
+  }
+  .made-video__svg {
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .made-right {
+    padding: 32px 32px;
+    width: 516px;
+    height: 400px;
+  }
+  .made__title {
+    margin-bottom: 50px;
+    @include text(24px, 28px, -0.72, 600, normal);
+  }
+  .made__subtitle {
+    @include text($fsize: 18px, $fweight: 600);
+    margin-bottom: 28px;
   }
 }
