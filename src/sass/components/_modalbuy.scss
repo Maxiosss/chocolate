@@ -9,10 +9,10 @@
   overflow: auto;
 }
 .modal-buy {
-  position: fixed;
+  position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
   width: 312px;
   height: 90vh;
   overflow: auto;
@@ -43,12 +43,19 @@
     width: 12px;
     height: 12px;
     fill: getColor('text-primary');
+    @media screen and (min-width: 768px) {
+      width: 14px;
+      height: 14px;
+    }
   }
   &__title {
     @extend %title;
     margin-bottom: 32px;
     &--orange {
       color: getColor('text-third');
+    }
+    @media screen and (min-width: 768px) {
+      @include text(24px, 1.16, -0.72px, 600);
     }
   }
 }
@@ -57,19 +64,27 @@
   overflow: auto;
   gap: 16px;
   &__item {
-    @include flex(flex-end, column);
+    min-width: 231px;
     padding: 32px 32px 28px 32px;
     border-radius: 15px;
     border: 1px solid rgba(17, 17, 17, 0.1);
-    background: getColor('background-secondary');
+    background-color: getColor('background-secondary');
+    @media screen and (min-width: 768px) {
+      min-width: 160px;
+      padding: 24px 20px 18px;
+    }
   }
   &__img {
     width: 167px;
     height: 148px;
     margin: 0 auto 16px;
+    @media screen and (min-width: 768px) {
+      width: 120px;
+      height: 107px;
+      margin: 0 auto 14px;
+    }
   }
   &__grams {
-    @include flex;
     width: 96px;
     height: 33px;
     border-radius: 100px;
@@ -81,14 +96,24 @@
 .modal-buy-list {
   @include flex($direction: column);
   gap: 18px;
+  @media screen and(min-width: 768px) {
+    &__item:nth-child(1) {
+      @include flex(space-between);
+    }
+    &__item:nth-child(1) &__label {
+      width: 246px;
+    }
+  }
   &__label {
     @include text(12px, 1.16, -0.24px, 500);
     color: #000;
     position: relative;
+    @media screen and (min-width: 768px) {
+      @include text($lheight:1.28, $fweight:500);
+    }
   }
   &__input {
     padding: 14px 18px;
-    max-width: 263px;
     width: 100%;
     margin-top: 8px;
     border-radius: 8px;
@@ -96,6 +121,9 @@
     box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
     &:nth-child(2) {
       margin-top: 14px;
+      @media screen and (min-width: 768px) {
+        margin-top: 0;
+      }
     }
     &::placeholder {
       @include text;
@@ -112,32 +140,38 @@
     top: 35px;
     left: 18px;
     @media screen and (min-width: 768px) {
+      top: 43px;
+      left: 24px;
       width: 32px;
       height: 24px;
     }
   }
   &__card {
     position: absolute;
-    width: 21px;
-    height: 12px;
+    width: 32px;
+    height: 21px;
     top: 35px;
     right: 14px;
     @media screen and (min-width: 768px) {
-      width: 30px;
-      height: 18px;
+      top: 43px;
+      right: 24px;
+      width: 44px;
+      height: 30px;
     }
   }
   &__textarea {
     padding: 14px 18px;
     margin-top: 8px;
     resize: none;
-    max-width: 263px;
     width: 100%;
     border-radius: 8px;
     border: 1.5px solid rgba(17, 17, 17, 0.05);
     box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+    margin-top: 8px;
+    height: 91px;
     @media screen and (min-width: 768px) {
-      max-width: 513px;
+      height: 137px;
+      padding: 22px 24px;
     }
   }
   &__btn-submit {
