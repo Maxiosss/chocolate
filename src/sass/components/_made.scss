@@ -87,6 +87,7 @@
   .video-info {
     @include flex();
     gap: 20px;
+    align-items: center;
   }
   .video-box {
     width: 600px;
