@@ -22,7 +22,7 @@
     @media screen and(min-width: 768px) {
             width: 516px;
             height: 414px;
-            padding: 163px 49px 163px 70px;
+            padding: 163px 49px 163px 170px;
         }
 
     &__btn {
@@ -53,11 +53,12 @@
     }
 
     &__title {
-        @include text(20px, normal, -0.4px, 600, uppercase);
+        @include text(20px, normal, -0.4px, 600);
         margin-bottom: 8px;
         color: #fcf1e0;
+        text-transform: uppercase;
         @media screen and(min-width: 768px){
-            @include text(24px, 1.16, -0.48px, 600, uppercase);
+            @include text(24px, 1.16, -0.48px, 600);
 
         }
     }
@@ -65,9 +66,10 @@
     &__text {
         @include text($lheight: 1.14);
         color: getColor('background-secondary');
+        max-width: 165px;
         @media screen and(min-width: 768px) {
-            @include text(18px, 1.33, -0.38px, 600, uppercase);
-        
+            @include text(18px, 1.33, -0.38px, 400);
+            max-width: 100%;
         }
     }
 
