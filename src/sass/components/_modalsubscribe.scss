@@ -8,70 +8,110 @@
   z-index: 99;
   overflow: auto;
 }
-.modal-subscribe-buy {
-  position: fixed;
+.subscribe-container {
+  padding: 32px 24px;
+  background-color: getColor('background-primary');
+  @media screen and (min-width: 768px) {
+    padding: 40px;
+  }
+}
+.modal-subscribe {
+  position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -50%);
   width: 311px;
-  height: 90vh;
   overflow: auto;
-  padding: 0 24px 32px;
   border-radius: 15px;
   z-index: 100;
-}
-.modal-subsribe-background {
-  background-image: url('../images/modal/chocosbackm.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 169px;
-  @media screen and (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (-o-min-device-pixel-ratio: 2/1),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url('../images/modal/chocosbackm@2x.jpg');
+  @media screen and (min-width: 768px) {
+    width: 538px;
   }
-  &-close__btn {
+  &-background {
+    background-color: getColor('text-third');
+    background-image: url('../images/modal/chocosbackm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 169px;
+    @media screen and (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/modal/chocosbackm@2x.jpg');
+    }
+    @media screen and (min-width: 768px) {
+      height: 196px;
+      background-image: url('../images/modal/chocosbacktd.jpg');
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (-o-min-device-pixel-ratio: 2/1),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/modal/chocosbacktd@2x.jpg');
+    }
+  }
+  &__btn-close {
     @include flex;
     position: absolute;
     top: 14px;
     right: 14px;
-    color: transparent;
+    background-color: transparent;
     width: 24px;
     height: 24px;
   }
-  &-close__icon {
+  &__icon-close {
     width: 12px;
     height: 12px;
     fill: getColor('background-secondary');
   }
-}
-.modal-subscribe__title {
-  @extend %title;
-  color: getColor('text-primary');
-  &--orange {
-    color: getColor('text-third');
+  &__title {
+    @extend %title;
+    color: getColor('text-primary');
+    &--orange {
+      color: getColor('text-third');
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 298px;
+      @include text(24px, 1.16, -0.72px, 600);
+    }
   }
-}
-.modal-subscribe__input {
-  width: 263px;
-  border-radius: 25px;
-  border: 1.5px solid rgba(17, 17, 17, 0.05);
-  box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
-  margin-top: 24px;
-  &::placeholder {
-    @include text;
-    color: rgba(64, 64, 64, 0.3);
+  &__input {
+    width: 263px;
+    padding: 14px 18px;
+    border-radius: 25px;
+    background-color: getColor('background-primary');
+    border: 1.5px solid rgba(17, 17, 17, 0.05);
+    box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
+    margin-top: 24px;
+    &::placeholder {
+      @include text;
+      color: rgba(64, 64, 64, 0.3);
+      @media screen and (min-width: 768px) {
+        @include text(18px, $lspacing: -0.36px);
+      }
+    }
+    @media screen and (min-width: 768px) {
+      width: 313px;
+      padding: 14px 24px;
+    }
   }
-}
-.modal-subscribe__btn-submit {
-  position: absolute;
-  bottom: 32px;
-  right: 24px;
-  border-radius: 100px;
-  @include text($fweight: 600);
-  width: 100px;
-  height: 45px;
+  &__btn-submit {
+    position: absolute;
+    bottom: 34px;
+    right: 24px;
+    border-radius: 100px;
+    @include text($fweight: 600);
+    width: 100px;
+    height: 45px;
+    color: getColor('text-secondary');
+    @media screen and (min-width: 768px) {
+      right: 40px;
+      bottom: 40px;
+      width: 137px;
+      height: 52px;
+    }
+  }
 }
