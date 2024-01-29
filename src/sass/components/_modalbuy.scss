@@ -73,7 +73,7 @@
   }
 }
 .buy-list {
-  @include flex;
+  @include flex(flex-start);
   overflow: auto;
   gap: 16px;
   margin-bottom: 32px;
@@ -111,7 +111,7 @@
   }
 }
 .modal-buy-list {
-  @include flex($direction: column);
+  @include flex($direction: column, $align: stretch);
   gap: 18px;
   @media screen and(min-width: 768px) {
     &__item:nth-child(1) {

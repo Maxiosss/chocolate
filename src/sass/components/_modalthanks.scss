@@ -8,7 +8,6 @@
   z-index: 99;
   overflow: auto;
 }
-
 .modal-thanks {
   position: relative;
   top: 50%;
@@ -21,10 +20,8 @@
   background-color: getColor('text-third');
   @media screen and(min-width: 768px) {
     width: 516px;
-    height: 414px;
     padding: 154px 49px 154px 170px;
   }
-
   &__btn {
     @include flex;
     position: absolute;
@@ -41,7 +38,6 @@
       height: 38px;
     }
   }
-
   &__svg {
     width: 8px;
     height: 8px;
@@ -51,7 +47,6 @@
       height: 11px;
     }
   }
-
   &__title {
     @include text(20px, normal, -0.4px, 600);
     margin-bottom: 8px;
@@ -61,7 +56,6 @@
       @include text(24px, 1.16, -0.48px, 600);
     }
   }
-
   &__text {
     @include text($lheight: 1.14);
     color: getColor('background-secondary');
@@ -71,7 +65,6 @@
       max-width: 100%;
     }
   }
-
   &__img {
     position: absolute;
     bottom: 0;
