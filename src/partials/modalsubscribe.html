@@ -1,15 +1,27 @@
-<div class="backdrop is-hidden">
-  <form class="modal-buy">
-    <div class="subscribe-background"></div>
-    <button type="button" class="modal-close">
-      <svg class="modal-close__icon">
+<div class="backdrop-subscribe is-hidden">
+  <form class="modal-subscribe">
+    <div class="modal-subscribe-background"></div>
+    <button
+      type="button"
+      class="modal-subscribe__btn-close"
+      data-close-subscribe
+    >
+      <svg class="modal-subscribe__icon-close">
         <use href="./images/symbol-defs.svg#icon-cross"></use>
       </svg>
     </button>
-    <h2 class="modal__title">
-      <span class="modal__title--orange">Explore</span> our new chocolate first!
-    </h2>
-    <input type="email" placeholder="Enter your email" required />
-    <button type="submit" class="modal__btn-submit">Submit</button>
+    <div class="subscribe-container">
+      <h2 class="modal-subscribe__title">
+        <span class="modal-subscribe__title--orange">Explore</span> our new
+        chocolate first!
+      </h2>
+      <input
+        type="email"
+        class="modal-subscribe__input"
+        placeholder="Enter your email"
+        required
+      />
+      <button type="submit" class="modal-subscribe__btn-submit">Submit</button>
+    </div>
   </form>
 </div>
