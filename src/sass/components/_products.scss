@@ -72,6 +72,7 @@
   }
 
   .products-list-btn {
+    cursor: pointer;
     width: 94px;
     height: 33px;
     border-radius: 100px;
@@ -79,5 +80,12 @@
     background-color: getColor('background-primary');
     color: getColor('text-primary');
     @include text($fweight: 600, $lspacing: 0);
+
+    &:hover, &:focus {
+       background-color: getColor("text-third");
+       color: getColor("text-secondary");
+       transition: 200ms background-color ease;
+       border: none;
+    }
   }
 }

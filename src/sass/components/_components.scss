@@ -181,10 +181,8 @@
         color: getColor('text-primary');
         overflow: auto;
         max-height: 146px;
-
         @media screen and (min-width: 1200px) {
           max-width: 214px;
-  
         }
       }
     }
