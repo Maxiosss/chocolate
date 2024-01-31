@@ -44,6 +44,12 @@
     background-color: transparent;
     border: 1px solid getColor('text-third');
     margin: 0 auto;
+
+    &:hover,
+        &:focus {
+            background-color: getColor('text-third');
+            color: getColor('background-primary');
+        }
 }
 
 .reviews-card__title{

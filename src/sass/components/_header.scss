@@ -1,7 +1,6 @@
 .header .inner-container{
     @include flex (space-between);
     padding: 20px;
-    margin-bottom: 14px;
 }
 
 .burgermenu{
@@ -52,6 +51,11 @@
 .header-list__link{
     @include text ($fweight: 500, $lheight: 16px, $lspacing: -0.28px);
     color: getColor("text-primary");
+
+    &:hover,
+        &:focus {
+            color: getColor('text-third');
+        }
 }
 
 .menu-right__svg{
@@ -60,4 +64,8 @@
     &:nth-child(1){
         margin-right: 18px;
     }
+    &:hover, &:focus{
+        fill: getColor('text-third');
+    }
+
 }
