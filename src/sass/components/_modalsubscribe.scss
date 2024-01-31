@@ -61,11 +61,19 @@
     background-color: transparent;
     width: 24px;
     height: 24px;
+    @media screen and (min-width: 768px) {
+      width: 28px;
+      width: 28px;
+    }
   }
   &__icon-close {
     width: 12px;
     height: 12px;
     fill: getColor('background-secondary');
+    @media screen and (min-width: 768px) {
+      width: 14px;
+      height: 14px;
+    }
   }
   &__title {
     @extend %title;
@@ -107,6 +115,9 @@
     width: 100px;
     height: 45px;
     color: getColor('text-secondary');
+    &:hover, &:focus {
+      background-color: #fcf1e0;
+    }
     @media screen and (min-width: 768px) {
       right: 40px;
       bottom: 40px;
