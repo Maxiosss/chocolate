@@ -85,7 +85,7 @@
 }
 @media (min-width: 1200px) {
   .video-info {
-    @include flex($align: center);
+    @include flex($align: flex-start);
     gap: 20px;
   }
   .video-box {
