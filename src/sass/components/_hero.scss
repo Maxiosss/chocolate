@@ -68,6 +68,12 @@
         border: none;
         @include text($fweight: 600);
         color: getColor("background-secondary");
+
+        &:hover,
+            &:focus {
+                color: getColor('text-third');
+                background-color: #FCF1E0;
+            }
     }
     &__how{
         padding: 12px 25px;
@@ -75,6 +81,12 @@
         @include text($fweight: 600);
         color: getColor("background-secondary");
         border: 1px solid getColor("background-secondary");
+
+        &:hover,
+            &:focus {
+                color: getColor('text-third');
+                border: 1px solid getColor("'text-third'");
+            }
     }
     &__svg{
         width: 16px;
@@ -101,6 +113,11 @@
             right: 0;
             margin: 0;
         }
+
+        &:hover,
+            &:focus {
+                color: getColor('text-third');
+            }
     }
 }
 
