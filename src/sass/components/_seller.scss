@@ -81,6 +81,7 @@
   &:hover,
   &:focus {
     background-color: #fcf1e0;
+    color: getColor('text-primary');
   }
   @media screen and (min-width: 768px) {
     width: 162px;

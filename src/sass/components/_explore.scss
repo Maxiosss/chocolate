@@ -65,6 +65,7 @@
     &:hover,
     &:focus {
       background-color: #fcf1e0;
+      color: getColor('text-primary');
     }
     @media screen and (min-width: 768px) {
       @include text(18px, $fweight: 600);
